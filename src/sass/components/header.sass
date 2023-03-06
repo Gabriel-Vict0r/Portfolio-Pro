@@ -1,0 +1,67 @@
+@use '../mixins'
+@use '../variables'
+.header
+    padding: 2rem
+
+    &-nav
+        @include mixins.header__center
+
+        &-logo
+            width: 180px
+            @include mixins.max-width(large)
+                width: 150px
+
+        &-list
+            @include mixins.header__center
+            gap: 2rem
+            @include mixins.max-width(medium)
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                position: absolute
+                right: calc(767 / 2)
+                top: 80px
+            &-link
+                color: variables.$color-white-standard
+                text-decoration: none
+                font-weight: 400
+                line-height: 24.6px
+                font-style: normal
+                font-size: 1.1rem
+                transition: all .2s ease-in-out
+                @include mixins.max-width(large)
+                    font-size: 1rem
+        
+
+.btn_contactMe
+    background: variables.$gradient-principal
+    width: 150px
+    height: 40px
+    border: none
+    border-radius: 25px
+    font-weight: 400
+    color: variables.$color-white-standard
+    cursor: pointer
+    font-size: 1.1rem
+    letter-spacing: 2px
+    transition: all .2s ease-in-out
+    @include mixins.max-width(large)
+        width: 120px
+        height: 35px
+        font-size: 1rem
+    
+    
+
+.header-nav-list-link:hover
+    color: variables.$color-blue-secondary
+
+.btn_contactMe:hover
+    background: variables.$gradiend-principal-reverse
+    scale: 1.02
+
+.linha
+    content: ''
+    width: 30px
+    color: variables.$color-white-standard
+    height: 2px
