@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from "../img/start/Logo-complete.svg";
 import "../sass/components/header.sass";
 import { Turn as Hamburger } from "hamburger-react";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
+import ButtonContact from "./buttons/buttonContact";
 function Header() {
   const menu = [
     { name: "Início", link: "/start", key: 1 },
@@ -11,12 +12,12 @@ function Header() {
     { name: "Serviços", link: "/services", key: 4 },
   ];
   const { innerWidth: width } = window;
-  const isMobile = width <= 767;
+  const isLarge = width <= 1024;
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!isMobile) {
-      setOpen(true)
+    if (!isLarge) {
+      setOpen(true);
     }
   }, [isOpen]);
   return (
@@ -25,7 +26,7 @@ function Header() {
         <Link to="/start">
           <img src={Logo} alt="logo" className="header-nav-logo" />
         </Link>
-        {isMobile && (
+        {isLarge && (
           <Hamburger
             color="#F0F0F0"
             rounded
@@ -44,9 +45,10 @@ function Header() {
                 {element.name}
               </Link>
             ))}
+            {isLarge ? <ButtonContact subClass="btn_contactLarge" /> : null}
           </ul>
         )}
-        {!isMobile && <button className="btn_contactMe">Contate-me</button>}
+        {!isLarge && <ButtonContact subClass="btn_contactMe" />}
       </nav>
     </header>
   );

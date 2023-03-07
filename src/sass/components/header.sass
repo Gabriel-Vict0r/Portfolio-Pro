@@ -2,34 +2,47 @@
 @use '../variables'
 .header
     padding: 2rem
+    z-index: 99
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
 
     &-nav
         @include mixins.header__center
-
         @include mixins.max-width(medium)
             justify-content: space-between
+            margin-left: 0
+            margin-right: 0
         @include mixins.max-width(large)
-            margin-left: 4rem
-            margin-right: 4rem
+            justify-content: space-between
+            width: 100%
 
         &-logo
             width: 180px
             @include mixins.max-width(large)
-                width: 150px
+                width: 180px
             @include mixins.max-width(medium)
                 width: 140px
         &-list
             @include mixins.header__center
             gap: 2rem
-            @include mixins.max-width(medium)
+            @include mixins.max-width(large)
                 display: flex
                 width: 100%
+                height: 0
                 flex-direction: column
                 justify-content: space-around
                 align-items: center
                 position: absolute
                 right: 0
                 top: 90px
+                border-top: 1px solid variables.$color-background-container-tirty
+                background-color: variables.$color-background-principal
+                padding: 50px
+                gap: 3.5rem
+                animation: showMenu .7s forwards ease-in-out
+
             &-link
                 color: variables.$color-white-standard
                 text-decoration: none
@@ -39,7 +52,7 @@
                 font-size: 1.1rem
                 transition: all .2s ease-in-out
                 @include mixins.max-width(large)
-                    font-size: 1rem
+                    font-size: 1.875rem
                 @include mixins.max-width(medium)
                     font-size: 1.4rem
         
@@ -59,9 +72,13 @@
     @include mixins.max-width(large)
         width: 120px
         height: 35px
-        font-size: 1rem
+        font-size: 1.875rem
     
-    
+.btn_contactLarge
+    @extend .btn_contactMe
+    width: 300px
+    height: 50px
+    font-size: 1.5rem
 
 .header-nav-list-link:hover
     color: variables.$color-blue-secondary
@@ -70,10 +87,22 @@
     background: variables.$gradiend-principal-reverse
     scale: 1.02
 
-// .hamburger
-//     display: flex
-//     flex-direction: column
-//     justify-content: space-between
-//     gap: .5rem
-//     background-color: variables.$color-background-principal
-//     border: none
+@keyframes showMenu
+    0%
+        height: 0px
+        opacity: 0
+
+    100%
+        height: 500px
+        opacity: 1
+
+.contain_Menu
+    animation: containMenu .7s forwards ease-in-out
+
+@keyframes containMenu
+    0%
+        height: 500px
+        opacity: 1
+    100%
+        height: 0
+        opacity: 0
