@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Logo from "../img/start/Logo-complete.svg";
 import "../sass/components/header.sass";
+import { Turn as Hamburger } from "hamburger-react";
+import { useState, useEffect} from "react";
 function Header() {
   const menu = [
     { name: "Início", link: "/start", key: 1 },
@@ -10,27 +12,40 @@ function Header() {
   ];
   const { innerWidth: width } = window;
   const isMobile = width <= 767;
+  const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setOpen(true)
+    }
+  }, [isOpen]);
   return (
     <header className="header">
       <nav className="header-nav">
-        <img src={Logo} alt="logo" className="header-nav-logo" />
+        <Link to="/start">
+          <img src={Logo} alt="logo" className="header-nav-logo" />
+        </Link>
         {isMobile && (
-          <div className="hamburger">
-            <div className="linha"></div>
-            <div className="linha"></div>
-          </div>
+          <Hamburger
+            color="#F0F0F0"
+            rounded
+            toggled={isOpen}
+            toggle={() => (isOpen ? setOpen(false) : setOpen(true))}
+          />
         )}
-        <ul className="header-nav-list">
-          {menu.map((element) => (
-            <Link
-              to={element.url}
-              key={element.key}
-              className="header-nav-list-link"
-            >
-              {element.name}
-            </Link>
-          ))}
-        </ul>
+        {isOpen && (
+          <ul className="header-nav-list">
+            {menu.map((element) => (
+              <Link
+                to={element.url}
+                key={element.key}
+                className="header-nav-list-link"
+              >
+                {element.name}
+              </Link>
+            ))}
+          </ul>
+        )}
         {!isMobile && <button className="btn_contactMe">Contate-me</button>}
       </nav>
     </header>

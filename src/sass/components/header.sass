@@ -6,22 +6,30 @@
     &-nav
         @include mixins.header__center
 
+        @include mixins.max-width(medium)
+            justify-content: space-between
+        @include mixins.max-width(large)
+            margin-left: 4rem
+            margin-right: 4rem
+
         &-logo
             width: 180px
             @include mixins.max-width(large)
                 width: 150px
-
+            @include mixins.max-width(medium)
+                width: 140px
         &-list
             @include mixins.header__center
             gap: 2rem
             @include mixins.max-width(medium)
                 display: flex
+                width: 100%
                 flex-direction: column
                 justify-content: space-around
                 align-items: center
                 position: absolute
-                right: calc(767 / 2)
-                top: 80px
+                right: 0
+                top: 90px
             &-link
                 color: variables.$color-white-standard
                 text-decoration: none
@@ -32,6 +40,8 @@
                 transition: all .2s ease-in-out
                 @include mixins.max-width(large)
                     font-size: 1rem
+                @include mixins.max-width(medium)
+                    font-size: 1.4rem
         
 
 .btn_contactMe
@@ -60,8 +70,10 @@
     background: variables.$gradiend-principal-reverse
     scale: 1.02
 
-.linha
-    content: ''
-    width: 30px
-    color: variables.$color-white-standard
-    height: 2px
+// .hamburger
+//     display: flex
+//     flex-direction: column
+//     justify-content: space-between
+//     gap: .5rem
+//     background-color: variables.$color-background-principal
+//     border: none
