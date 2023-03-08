@@ -14,14 +14,25 @@ function Header() {
   const { innerWidth: width } = window;
   const isLarge = width <= 1024;
   const [isOpen, setOpen] = useState(false);
-
+  const [colorActive, setActiveColor] = useState(false);
   useEffect(() => {
     if (!isLarge) {
       setOpen(true);
     }
   }, [isOpen]);
+  useEffect(() => {
+    function scrollPosition() {
+      if (window.scrollY > 40) {
+        setActiveColor(true);
+      }
+      else {
+        setActiveColor(false);
+      }
+    }
+    window.addEventListener('scroll', scrollPosition)
+  }, []);
   return (
-    <header className="header">
+    <header className={colorActive ? "header activeColor" : "header"}>
       <nav className="header-nav">
         <Link to="/start">
           <img src={Logo} alt="logo" className="header-nav-logo" />
@@ -45,10 +56,17 @@ function Header() {
                 {element.name}
               </Link>
             ))}
-            {isLarge ? <ButtonContact subClass="btn_contactLarge" /> : null}
+            {isLarge ? (
+              <ButtonContact
+                subClass="btn_contactLarge"
+                textButton="Contate-me"
+              />
+            ) : null}
           </ul>
         )}
-        {!isLarge && <ButtonContact subClass="btn_contactMe" />}
+        {!isLarge && (
+          <ButtonContact subClass="btn_contactMe" textButton="Contate-me" />
+        )}
       </nav>
     </header>
   );

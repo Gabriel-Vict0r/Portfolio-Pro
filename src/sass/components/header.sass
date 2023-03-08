@@ -57,35 +57,12 @@
                     font-size: 1.4rem
         
 
-.btn_contactMe
-    background: variables.$gradient-principal
-    width: 150px
-    height: 40px
-    border: none
-    border-radius: 25px
-    font-weight: 400
-    color: variables.$color-white-standard
-    cursor: pointer
-    font-size: 1.1rem
-    letter-spacing: 2px
-    transition: all .2s ease-in-out
-    @include mixins.max-width(large)
-        width: 120px
-        height: 35px
-        font-size: 1.875rem
-    
-.btn_contactLarge
-    @extend .btn_contactMe
-    width: 300px
-    height: 50px
-    font-size: 1.5rem
+
 
 .header-nav-list-link:hover
     color: variables.$color-blue-secondary
 
-.btn_contactMe:hover
-    background: variables.$gradiend-principal-reverse
-    scale: 1.02
+
 
 @keyframes showMenu
     0%
@@ -106,3 +83,7 @@
     100%
         height: 0
         opacity: 0
+
+.activeColor
+    background-color: variables.$color-background-principal
+    transition: all 0.7s ease-in-out

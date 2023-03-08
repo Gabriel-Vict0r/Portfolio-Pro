@@ -1,7 +1,32 @@
 @use '../variables'
 @use '../mixins'
 
+.container-services
+    display: flex
+    flex-direction: column
+    align-items: center
 .services
     display: grid
-    grid-template-columns: repeat(2, 3fr)
-    margin-top: 2rem
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    margin: 2rem auto
+    margin-bottom: 7rem
+    gap: 2rem
+    max-width: 90%
+    position: relative
+
+.elemento-left
+    position: absolute
+    left: -200px
+    top: 200px
+    width: 250px
+
+.light-right
+    position: absolute
+    right: -300px
+    z-index: -1
+
+.retangle-right
+    position: absolute
+    right: -50px
+    bottom: -60px

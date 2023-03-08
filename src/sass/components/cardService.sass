@@ -3,4 +3,31 @@
 
 .card-service
     box-sizing: border-box
-    max-width: 300px
+    width: 100%
+    background: variables.$gradiend-containers-services
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    border-radius: 4px
+    gap: 1rem
+    &-img
+        max-height: 190px
+        z-index: 2
+
+    &-text
+        color: variables.$color-white-standard
+        font-weight: 300
+    
+    &-title
+        text-align: left
+        font-size: 1.3rem
+        font-weight: 600
+        color: variables.$color-white-standard
+        width: 100%
+.details
+    position: absolute
+    top: 0
+    right: 0
