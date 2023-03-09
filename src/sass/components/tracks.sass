@@ -11,8 +11,14 @@
         color: variables.$color-white-standard
         font-weight: 600
         margin-bottom: 1rem
+        @include mixins.max-width(medium)
+            font-size: 2rem
     &-text
         text-align: center
         font-weight: 300
         color: variables.$color-white-standard
         font-size: 1.25rem
+        max-width: 50%
+        margin: 0 auto
+        @include mixins.max-width(medium)
+            font-size: 1rem

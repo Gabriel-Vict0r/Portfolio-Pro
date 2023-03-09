@@ -31,6 +31,7 @@ function Services() {
           alt="detalhe de um retângulo"
           className="retangle-right"
         />
+        <img src="src\img\services\Luz.svg" alt="Luz" className="light-left"/>
       </div>
       <ButtonContact
         subClass="btn_contactMe btnService"

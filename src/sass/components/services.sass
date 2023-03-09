@@ -9,6 +9,8 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(2, 1fr)
+    @include mixins.max-width(medium)
+        grid-template-columns: 1fr
     margin: 2rem auto
     margin-bottom: 7rem
     gap: 2rem
@@ -30,3 +32,13 @@
     position: absolute
     right: -50px
     bottom: -60px
+    @include mixins.max-width(medium)
+        right: -20px
+        bottom: -30px
+
+.light-left
+    position: absolute
+    left: -200px
+    bottom: -200px
+    z-index: -1
+    width: 300px
