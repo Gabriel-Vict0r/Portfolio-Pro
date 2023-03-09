@@ -1,7 +1,7 @@
 import React from "react";
 import CardService from "./CardsServices/CardService";
 import Track from "./tracks/Track";
-import copyServices from "../Copy/copyServices";
+import {copyServices} from "../Copy/copy";
 import "../sass/components/services.sass";
 import ButtonContact from "./buttons/buttonContact";
 function Services() {
@@ -31,7 +31,7 @@ function Services() {
           alt="detalhe de um retângulo"
           className="retangle-right"
         />
-        <img src="src\img\services\Luz.svg" alt="Luz" className="light-left"/>
+        <img src="src\img\services\Luz.svg" alt="Luz" className="light-left" />
       </div>
       <ButtonContact
         subClass="btn_contactMe btnService"

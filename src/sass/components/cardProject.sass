@@ -1,0 +1,28 @@
+@use '../mixins'
+@use '../variables'
+
+.project
+    max-width: 100%
+    margin: 3rem auto
+    padding: 3rem
+    display: flex
+    flex-direction: row
+    gap: 2rem
+
+    &-images
+        width: 100%
+    
+        img
+            width: 100%
+
+    &-copy
+        color: variables.$color-white-standard
+
+        h3
+            font-weight: 600
+            font-size: 1.7rem
+
+        p
+            font-weight: 300
+            font-size: 1rem
+            max-width: 70%

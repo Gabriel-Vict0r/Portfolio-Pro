@@ -20,4 +20,15 @@ const copyServices = [
     img: "src/img/services/Computador-service4.svg",
   },
 ];
-export default copyServices;
+
+const projects = [
+  {
+    title: "SGC",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    urlImage:
+      "https://raw.githubusercontent.com/Gabriel-Vict0r/Sistema-de-Gerenciamento-de-Chaves/main/screen_noNotebok_2.jpg",
+    urlProject:
+      "https://github.com/Gabriel-Vict0r/Sistema-de-Gerenciamento-de-Chaves",
+  },
+];
+export {copyServices, projects};
