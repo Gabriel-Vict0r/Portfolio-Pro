@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Track from "./components/tracks/Track";
 import Habilities from "./components/Habilities";
 import Projects from "./components/Projects";
+import TrackAnimated from "./components/trackAnimetaded/TrackAnimated";
 
 function App() {
   const copyServices = { title: "Serviços", text: "Como eu posso te ajudar?" };
@@ -29,6 +30,7 @@ function App() {
       <Container>
         <Projects />
       </Container>
+      <TrackAnimated text='Desenvolvedor Web' />
     </div>
   );
 }
