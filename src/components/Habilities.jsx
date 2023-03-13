@@ -13,7 +13,7 @@ import {
 import { AiFillHtml5 } from "react-icons/Ai";
 import { GiJesterHat } from "react-icons/Gi";
 import IconHab from "./icon/IconHab";
-import '../sass/components/habilities.sass'
+import '../sass/components/widgets/habilities.sass'
 const Habilities = () => {
   return (
     <section className="habilities">

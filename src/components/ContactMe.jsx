@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/components/contactMe.sass";
+import "../sass/components/widgets/contactMe.sass";
 const ContactMe = () => {
   return (
     <section className="contact">

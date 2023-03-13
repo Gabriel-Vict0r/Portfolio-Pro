@@ -1,0 +1,28 @@
+@use '../../mixins'
+@use '../../variables'
+
+footer
+    width: 100%
+    background: variables.$gradient-principal
+    padding: 1.2rem 2rem
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+
+    p
+        color: variables.$color-white-standard
+        font-weight: 300
+        letter-spacing: 1px
+
+    .icons a
+        text-decoration: none
+
+        .icon-footer
+            color: variables.$color-white-standard
+            font-size: 2rem
+            margin-right: 1rem
+            font-size: 3rem
+
+            :hover
+                box-shadow: 3px 3px 3px variables.$color-blue-primary

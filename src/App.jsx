@@ -10,7 +10,7 @@ import Projects from "./components/Projects";
 import TrackAnimated from "./components/trackAnimetaded/TrackAnimated";
 import WhoIAm from "./components/WhoIAm";
 import ContactMe from "./components/ContactMe";
-
+import Footer from './components/Footer'
 function App() {
   const copyServices = { title: "Serviços", text: "Como eu posso te ajudar?" };
   const copyProjects = {
@@ -37,6 +37,7 @@ function App() {
       <Container>
         <ContactMe />
       </Container>
+      <Footer />
     </div>
   );
 }

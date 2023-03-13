@@ -2,7 +2,7 @@ import React from "react";
 import CardService from "./CardsServices/CardService";
 import Track from "./tracks/Track";
 import {copyServices} from "../Copy/copy";
-import "../sass/components/services.sass";
+import "../sass/components/widgets/services.sass";
 import ButtonContact from "./buttons/buttonContact";
 function Services() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../img/start/Logo-complete.svg";
-import "../sass/components/header.sass";
+import "../sass/components/widgets/header.sass";
 import { Turn as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 import ButtonContact from "./buttons/buttonContact";

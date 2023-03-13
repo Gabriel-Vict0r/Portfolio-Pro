@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/components/start.sass";
+import "../sass/components/widgets/start.sass";
 function Start() {
   return (
     <section className="first-content">

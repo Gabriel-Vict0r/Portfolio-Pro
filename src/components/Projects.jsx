@@ -4,7 +4,7 @@ import { projects } from "../Copy/copy";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Autoplay } from "swiper";
 import "swiper/swiper-bundle.min.css";
-import "../sass/components/projects.sass";
+import "../sass/components/widgets/projects.sass";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
